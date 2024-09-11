@@ -3,13 +3,118 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 47.4% 11.2%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 47.4% 11.2%;
+
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 100% 50%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 215 20.2% 65.1%;
+
+        --radius: 0.5rem;
+
+        --brand-primary: #6947bf;
+        --brand-primary-100: #f0edf9;
+        --neutrals-100: #eaf0f2;
+        --neutrals-200: #d6dfe4;
+        --neutrals-300: #c1ccd6;
+        --neutrals-400: #adb8c9;
+        --neutrals-500: #98a1bb;
+        --neutrals-600: #7a8196;
+        --neutrals-700: #5b6170;
+        --neutrals-800: #3d404b;
+        --neutrals-900: #1e2026;
+        --ib-primary-blue: #0055d3;
+        --gray-background: #e5ecf3;
+        --wrong-answer: #ff4836;
+        --right-answer: #3cc28a;
+        --font-bricolage: "__bricolage_300928", "__bricolage_Fallback_300928";
+        /* extras */
+        --icon-fill: 10 45 103;
+        --primary-500: #6947bf;
+        --soft: 103 107 137;
+        --subtle: 151 157 181;
+        --action-sec: 10 45 103;
+        --gray-bg: 221 223 233;
+        --noise: 240 241 245;
+        --inset: 240 241 245;
+    }
+
+    .dark {
+        --background: 224 71% 4%;
+        --foreground: 213 31% 91%;
+
+        --muted: 223 47% 11%;
+        --muted-foreground: 215.4 16.3% 56.9%;
+
+        --accent: 216 34% 17%;
+        --accent-foreground: 210 40% 98%;
+
+        --popover: 224 71% 4%;
+        --popover-foreground: 215 20.2% 65.1%;
+
+        --border: 216 34% 17%;
+        --input: 216 34% 17%;
+
+        --card: 224 71% 4%;
+        --card-foreground: 213 31% 91%;
+
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 1.2%;
+
+        --secondary: 222.2 47.4% 11.2%;
+        --secondary-foreground: 210 40% 98%;
+
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 216 34% 17%;
+
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings:
+            "rlig" 1,
+            "calt" 1;
+        line-height: normal;
+    }
+}
+
 body {
-    font-family: "Bricolage Grotesque", sans-serif;
+    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
 .stack-cards__item {
     position: sticky;
-    top: 150px;
+    top: 80px;
     transform-origin: center top;
     transition: transform 0.3s;
 }

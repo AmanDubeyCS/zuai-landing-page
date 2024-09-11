@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+const { fontFamily } = require("tailwindcss/defaultTheme")
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +11,24 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "brand-primary": "var(--brand-primary)",
+        "brand-primary-100": "var(--brand-primary-100)",
+        "neutrals-100": "var(--neutrals-100)",
+        "neutrals-200": "var(--neutrals-200)",
+        "neutrals-300": "var(--neutrals-300)",
+        "neutrals-400": "var(--neutrals-400)",
+        "neutrals-500": "var(--neutrals-500)",
+        "neutrals-600": "var(--neutrals-600)",
+        "neutrals-700": "var(--neutrals-700)",
+        "neutrals-800": "var(--neutrals-800)",
+        "neutrals-900": "var(--neutrals-900)",
+        
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        bricolage: ["var(--font-bricolage)", ...fontFamily.sans],
+        mont: ["var(--font-mont)", ...fontFamily.sans],
+        kalam: ["var(--font-kalam)", ...fontFamily.sans],
       },
       animation: {
         marquee: "marquee var(--duration) linear infinite",

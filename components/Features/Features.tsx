@@ -2,41 +2,49 @@
 import React, { useEffect, useRef } from "react";
 import { FeatureCard } from "./featureCard";
 import StackCards from "./StackCard";
-
-export const projects = [
+// import MockAnalysis from "@/assets/Analysis-Image.png"
+// import MockExplanation from "@/assets/Mock-Explaination.png"
+// import MockTopic from "@/assets/Mock-Topi-Selection.png"
+import EvaluationResult from "@/assets/EvaluationResult.png"
+import DetaildEval from "@/assets/detailedEval.png"
+import UploadImg from "@/assets/uploadFile.png"
+const cards = [
   {
-    title: "Matthias Leidinger",
-    description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    src: "rock.jpg",
-    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
-    color: "#BBACAF",
+    image: UploadImg,
+    title: "Easy to use",
+    description: "Expert evaluation on your IB Diploma coursework",
+    points: [
+      "Upload your Tok, EE or IA files to ZuAI",
+      "Upload images, graphs & exhibitions",
+      "Get 99% accurate predicted evaluation",
+      "Get detailed suggestions to improve"
+    ],
+    numbers: "10,000",
   },
   {
-    title: "Clément Chapillon",
-    description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
-    src: "tree.jpg",
-    link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-    color: "#977F6D",
+    image: EvaluationResult,
+    title: "Quick Evaluation",
+    description: "Evaluate your coursework within minutes",
+    points: [
+      "Evaluate the strengths and weakness of your essay",
+      "Get insights on how to improve your essay to score better",
+      "Get access to sample coursworks",
+    ],
+    numbers: "10,000",
   },
   {
-    title: "Zissou",
-    description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-    src: "water.jpg",
-    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
-    color: "#C2491D",
+    image: DetaildEval,
+    title: "Detailed Analysis",
+    description: "Get detailed analysis of your coursework",
+    points: [
+      "Insights based on different scoring criteria's as per the curriculum",
+      "Detailed insights on scope for improvement",
+      "Feedback on writing style and language",
+      "Get help with structure and methodology used for the coursework"
+    ],
+    numbers: "10,000",
   },
-  {
-    title: "Zissou",
-    description:
-      "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-    src: "water.jpg",
-    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
-    color: "#C2491D",
-  },
-];
+]
 
 export function Features() {
   const stackRef = useRef(null);
@@ -51,16 +59,17 @@ export function Features() {
       {/* <h2 className="text-center text-[32px] font-bold leading-[normal] tracking-[0.16px] text-neutrals-900 sm:text-[56px] sm:tracking-[0.28px]">
         What makes ZuAI special?
       </h2> */}
-      <ul className="stack-cards js-stack-cards" ref={stackRef}>
-        {projects.map((card) => (
+      <ul className="stack-cards js-stack-cards w-full" ref={stackRef}>
+        {cards.map((card) => (
           <li
             key={card.title}
             className="stack-cards__item js-stack-cards__item mb-20"
           >
             <FeatureCard
-              image={card.link}
+              image={card.image}
               title={card.title}
               description={card.description}
+              points={card.points}
             />
           </li>
         ))}

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import ratings from "@/assets/ratings.png";
 import sparkle from "@/assets/sparkStar.png";
 import hand from "@/assets/handsPrase.png";
 import rocket from "@/assets/rocket-img.png";
@@ -24,17 +23,25 @@ export function Hero() {
           </span>
         </motion.h1>
       </div>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
+        className="flex flex-row items-center justify-center w-full"
       >
-        <Image
-          src={ratings}
-          alt="ratings"
-          className="w-[298px] h-auto rounded-[5px]"
-        />
-      </motion.div>
+        <AnimatedTooltip items={people} />
+        <div className="ml-6 text-[18px] font-semibold">
+         <div className="flex items-center font-bold">
+         <Icons.starFilledIcon className="size-[18px] text-yellow-500"/>
+          <Icons.starFilledIcon className="size-[18px] text-yellow-500"/>
+          <Icons.starFilledIcon className="size-[18px] text-yellow-500"/>
+          <Icons.starFilledIcon className="size-[18px] text-yellow-500"/>
+          <Icons.starFilledIcon className="size-[18px] text-yellow-500"/>
+          4.9 on review
+         </div>
+          <p className="text-base font-medium">from 45,500+ members</p>
+        </div>
+      </motion.div> */}
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -54,7 +61,7 @@ export function Hero() {
         <div className="flex flex-1 items-start gap-2">
           <Image src={sparkle} alt="sparkle" className="size-[40px]" />
           <div>
-            <p className="text-[23px] font-bold leading-[normal]">10k+</p>
+            <p className="text-[23px] font-bold leading-[normal]">100k+</p>
             <p className="text-[12px] font-medium leading-[normal] ">
               resources
             </p>
@@ -63,7 +70,7 @@ export function Hero() {
         <div className="flex flex-1  items-start gap-2">
           <Image src={hand} alt="sparkle" className="size-[40px]" />
           <div>
-            <p className="text-[23px] font-bold leading-[normal]">15k+</p>
+            <p className="text-[23px] font-bold leading-[normal]">50k+</p>
             <p className="text-[12px] font-medium leading-[normal] ">
               IB Students
             </p>

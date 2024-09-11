@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import image from "@/assets/rocket-img.png";
 import DashboardBGImage from "@/assets/hero-bg.svg";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -23,7 +22,17 @@ export function HeroImage() {
       }}
     >
       <div className="mx-auto max-w-[664px] px-4 lg:hidden">
-        <Image src={image} alt="hero image" className="w-full h-auto border-[12px] rounded-[16px] border-blue-950" />
+      <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/XDqfdOsjW0w?controls=0&loop=1&autoplay=1&playlist=XDqfdOsjW0w" 
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-[16px] w-full h-[400px]  border-[12px] border-blue-950 mx-auto"
+            />
+        {/* <Image src={image} alt="hero image" className="w-full h-auto border-[12px] rounded-[16px] border-blue-950" /> */}
       </div>
       {/* lg and above */}
       <div
@@ -41,58 +50,21 @@ export function HeroImage() {
             />
           </div>
           <div className="sticky top-0 z-50 mx-auto flex h-fit w-full items-start justify-center">
-            <div className="relative z-10 grid w-full place-items-center px-4 ">
-              <Image
-                src={image}
-                alt="hero image"
-                className="h-[480px] w-3/5 bg-white  border-[12px] rounded-[16px] border-blue-950"
-              />
+            <div className="relative  z-10 grid w-full place-items-center px-4 ">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/XDqfdOsjW0w?controls=0&loop=1&autoplay=1&playlist=XDqfdOsjW0w" 
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-[16px] h-[500px] w-[700px] 2xl:h-[600px] 2xl:w-[800px] 3xl:h-[850px] 3xl:w-[1200px]  border-[12px] border-blue-950"
+            />
             </div>
           </div>
         </div>
       </div>
     </motion.section>
   );
-}
-
-{
-  /* <motion.div
-style={{ opacity: opacity1 }}
-className="z-10 hidden font-kalam lg:flex"
->
-<Image
-  src={line}
-  alt="arrow"
-  className="absolute left-0 top-0 size-[300px] shrink-0"
-/>
-<p className="absolute left-0 top-[120px] w-[121px] rotate-[-15deg] text-center text-lg font-normal leading-[130%] text-[#AA7712] md:flex">
-  Select a subject to get started
-</p>
-</motion.div>
-<motion.div
-style={{ opacity: opacity2 }}
-className="z-10 hidden font-kalam lg:flex"
->
-<Image
-  src={line}
-  alt="arrow"
-  className="absolute right-[-166px] top-[-122px] size-[300px] shrink-0 -scale-x-100"
-/>
-<p className="absolute right-[-180px] top-0  w-[121px] rotate-[2.45deg] text-center text-lg font-normal leading-[130%] text-[#AA7712] md:flex">
-  Maintain daily streak to ace your Learning!
-</p>
-</motion.div>
-<motion.div
-style={{ opacity: opacity3 }}
-className="z-10 hidden font-kalam lg:flex"
->
-<Image
-  src={line}
-  alt="arrow"
-  className="absolute bottom-[-15px] right-[-114px] size-[300px] shrink-0 -scale-x-100"
-/>
-<p className="absolute bottom-[105px] right-[-140px] w-[121px] rotate-[2.45deg] text-center text-lg font-normal leading-[130%] text-[#AA7712] md:flex">
-  Achieve More with AI buddy at Your Side
-</p>
-</motion.div> */
 }

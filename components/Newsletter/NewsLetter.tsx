@@ -2,7 +2,7 @@ import React from "react";
 
 export function NewsLetter() {
   return (
-    <div className="bg-red-600 py-10">
+    <div style={{background: "linear-gradient(140deg, #6846BE 13.99%, #351094 85.83%), #6947BF"}} className=" py-10">
       <div className="flex flex-col items-center justify-center light">
         <div className="w-full max-w-md rounded-lg p-6">
           <h2 className="text-2xl font-bold text-white mb-4 text-center">

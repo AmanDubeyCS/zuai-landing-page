@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import Marquee from "../ui/marquee";
+import { Icons } from "../icons";
 
 const reviews = [
   {
@@ -66,37 +66,31 @@ const reviews = [
 
 const ReviewCard = ({
   name,
-  title,
   description,
 }: {
   name: string;
-  title: string;
   description: string;
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative flex flex-col w-[300px] h-[250px] bordercursor-pointer overflow-hidden rounded-xl p-4 justify-between",
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]"
-      )}
-    >
-      <div className="flex flex-col items-start gap-2">
-        <p className="text-[26px] font-bold leading-[normal] tracking-[0.139px]">
-          {title}
+    <div className="flex h-[240px] w-[360px] flex-col items-start gap-3 self-stretch rounded-[24px] border border-neutrals-200 bg-white p-4">
+      <div className="relative">
+        <Icons.Quote className="absolute left-[6px] h-[19px] w-[27px] rotate-180 lg:h-[37px] lg:w-[51px]" />
+        <p className="relative z-10 line-clamp-5 items-start px-4 py-2 text-[22px] font-medium leading-[125%] text-neutrals-700">
+          {description}{" "}
         </p>
-        <p className="text-base font-normal">{description}</p>
+        <Icons.Quote className="absolute bottom-[-26px] right-[12px] h-[19px] w-[27px] lg:h-[37px] lg:w-[51px]" />
       </div>
-      <p className="text-[18px] font-semibold tracking-[0.087px] leading-[normal]">
-        - {name}
-      </p>
-    </figure>
+      <span className="px-8 text-base font-normal leading-[125%] text-neutrals-800">
+        -{name}
+      </span>
+    </div>
   );
 };
 
 export function MarqueeDemo() {
   return (
-    <div className="relative mx-auto h-[400px] flex size-full w-[calc(100vw-2rem)] flex-col items-center justify-center overflow-hidden rounded-lg">
-      <Marquee pauseOnHover className="[--duration:20s]">
+    <div className="relative max-w-[1200px] mx-auto h-[400px] flex size-full w-[calc(100vw-2rem)] flex-col items-center justify-center overflow-hidden rounded-lg">
+      <Marquee pauseOnHover className="[--duration:30s]">
         {reviews.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}
