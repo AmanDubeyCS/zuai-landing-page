@@ -11,7 +11,7 @@ export function HeroImage() {
     target: containerRef,
   });
 
-  const opacity1 = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
+  const opacity1 = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const color = useTransform(opacity1, (value) => `rgba(255,255,255,${value})`);
 
   return (

@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 
 @layer base {
     :root {
@@ -109,7 +110,8 @@
 }
 
 body {
-    font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    /* font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" */
+    font-family: "Bricolage Grotesque", system-ui;
 }
 
 .stack-cards__item {

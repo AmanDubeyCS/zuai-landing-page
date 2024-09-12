@@ -16,7 +16,7 @@ export function FeatureCard({image, title, description, points }: Props) {
         id="card-container"
         className=" flex size-fit flex-col-reverse items-start overflow-hidden rounded-[32px] border border-neutrals-100 max-w-[864px] bg-white sm:flex-row"
       >
-        <div className="flex h-auto max-w-[346px] shrink-0 flex-col items-start justify-between gap-3 self-stretch sm:w-[320px] sm:max-w-[auto]">
+        <div className="flex h-auto max-w-[346px] shrink-0 flex-col items-start justify-between gap-3 self-stretch sm:w-[320px] sm:max-w-[auto] p-2 sm:p-0">
           <div className="flex flex-col items-start gap-3 self-stretch sm:px-[32px] sm:py-[24px]">
             <div className="flex flex-col items-start gap-1 self-stretch px-2 sm:gap-3">
               <div className="flex flex-row items-center gap-[2px] self-stretch sm:flex-col sm:items-start">
@@ -61,8 +61,6 @@ export function FeatureCard({image, title, description, points }: Props) {
           <Image
             src={image}
             alt="image"
-            
-            objectFit="cover"
             className="mx-auto h-full"
           />
         </div>

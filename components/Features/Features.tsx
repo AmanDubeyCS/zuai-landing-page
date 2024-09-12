@@ -56,9 +56,6 @@ export function Features() {
   }, []);
   return (
     <div className="w-full flex flex-col gap-10 justify-center items-center py-[20px]">
-      {/* <h2 className="text-center text-[32px] font-bold leading-[normal] tracking-[0.16px] text-neutrals-900 sm:text-[56px] sm:tracking-[0.28px]">
-        What makes ZuAI special?
-      </h2> */}
       <ul className="stack-cards js-stack-cards w-full" ref={stackRef}>
         {cards.map((card) => (
           <li

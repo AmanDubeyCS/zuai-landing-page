@@ -17,7 +17,7 @@ export function NewsLetter() {
             />
 
             <button
-              className={`w-[100px] h-[40px] bg-[#6947BF] flex items-center justify-center cursor-pointer duration-[0.5s] overflow-hidden shadow-[0px_5px_10px_rgba(0,0,0,0.103)] relative rounded-full border-[none] md:active:duration-[0.5s] md:active:scale-95`}
+              className={`w-fit px-3 h-[40px] bg-[#6947BF] flex items-center justify-center cursor-pointer duration-[0.5s] overflow-hidden shadow-[0px_5px_10px_rgba(0,0,0,0.103)] relative rounded-full border-[none] md:active:duration-[0.5s] md:active:scale-95`}
             >
               <p className="text h-full w-fit flex items-center justify-center text-white z-[1] duration-[0.5s] text-[1.04em] font-normal">
                 Subscribe
