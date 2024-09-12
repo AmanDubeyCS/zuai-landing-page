@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import { Hero } from "./Hero";
-import { FadeInSection } from "../fadein-section";
 
 export function HeroContainer() {
 
