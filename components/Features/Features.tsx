@@ -1,7 +1,7 @@
-'use client'
-import React, { useEffect, useRef } from "react";
-import { FeatureCard } from "./featureCard";
-import StackCards from "./StackCard";
+"use client"
+import React, { useEffect, useRef } from "react"
+import { FeatureCard } from "./featureCard"
+import StackCards from "./StackCard"
 // import MockAnalysis from "@/assets/Analysis-Image.png"
 // import MockExplanation from "@/assets/Mock-Explaination.png"
 // import MockTopic from "@/assets/Mock-Topi-Selection.png"
@@ -17,7 +17,7 @@ const cards = [
       "Upload your Tok, EE or IA files to ZuAI",
       "Upload images, graphs & exhibitions",
       "Get 99% accurate predicted evaluation",
-      "Get detailed suggestions to improve"
+      "Get detailed suggestions to improve",
     ],
     numbers: "10,000",
   },
@@ -40,22 +40,22 @@ const cards = [
       "Insights based on different scoring criteria's as per the curriculum",
       "Detailed insights on scope for improvement",
       "Feedback on writing style and language",
-      "Get help with structure and methodology used for the coursework"
+      "Get help with structure and methodology used for the coursework",
     ],
     numbers: "10,000",
   },
 ]
 
 export function Features() {
-  const stackRef = useRef(null);
+  const stackRef = useRef(null)
 
   useEffect(() => {
     if (stackRef.current) {
-      new StackCards(stackRef.current);
+      new StackCards(stackRef.current)
     }
-  }, []);
+  }, [])
   return (
-    <div className="w-full flex flex-col gap-10 justify-center items-center py-[20px]">
+    <div className="flex w-full flex-col items-center justify-center gap-10 py-[20px]">
       <ul className="stack-cards js-stack-cards w-full" ref={stackRef}>
         {cards.map((card) => (
           <li
@@ -72,5 +72,5 @@ export function Features() {
         ))}
       </ul>
     </div>
-  );
+  )
 }

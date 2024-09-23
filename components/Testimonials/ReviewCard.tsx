@@ -1,5 +1,5 @@
-import Marquee from "../ui/marquee";
-import { Icons } from "../icons";
+import Marquee from "../ui/marquee"
+import { Icons } from "../icons"
 
 const reviews = [
   {
@@ -62,14 +62,14 @@ const reviews = [
     description:
       "The product works as advertised. Nothing fancy, but it gets the job done. Would buy again.",
   },
-];
+]
 
 const ReviewCard = ({
   name,
   description,
 }: {
-  name: string;
-  description: string;
+  name: string
+  description: string
 }) => {
   return (
     <div className="flex h-[240px] w-[360px] flex-col items-start gap-3 self-stretch rounded-[24px] border border-neutrals-200 bg-white p-4">
@@ -84,19 +84,19 @@ const ReviewCard = ({
         -{name}
       </span>
     </div>
-  );
-};
+  )
+}
 
 export function MarqueeDemo() {
   return (
-    <div className="relative max-w-[1200px] mx-auto h-[400px] flex size-full w-[calc(100vw-2rem)] flex-col items-center justify-center overflow-hidden rounded-lg">
+    <div className="relative mx-auto flex size-full h-[400px] w-[calc(100vw-2rem)] max-w-[1200px] flex-col items-center justify-center overflow-hidden rounded-lg">
       <Marquee pauseOnHover className="[--duration:30s]">
         {reviews.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-white "></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-white "></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-white"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-white"></div>
     </div>
-  );
+  )
 }

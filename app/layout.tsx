@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "@/components/Header/Header";
+import type { Metadata } from "next"
+import "./globals.css"
+import { Header } from "@/components/Header/Header"
 
 export const metadata: Metadata = {
   title: "ZuAI Home",
   description: "IB landing Page",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -22,5 +22,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  );
+  )
 }

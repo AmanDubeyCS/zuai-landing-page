@@ -40,5 +40,5 @@ export default function Home() {
       <div className="hidden 2xl:block">2xl</div>
     </div> */}
     </>
-  );
+  )
 }

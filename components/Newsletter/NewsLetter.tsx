@@ -1,25 +1,31 @@
-import React from "react";
+import React from "react"
 
 export function NewsLetter() {
   return (
-    <div style={{background: "linear-gradient(140deg, #6846BE 13.99%, #351094 85.83%), #6947BF"}} className=" py-10">
-      <div className="flex flex-col items-center justify-center light">
+    <div
+      style={{
+        background:
+          "linear-gradient(140deg, #6846BE 13.99%, #351094 85.83%), #6947BF",
+      }}
+      className="mx-auto max-w-[992px] rounded-[16px] py-10"
+    >
+      <div className="flex flex-col items-center justify-center">
         <div className="w-full max-w-md rounded-lg p-6">
-          <h2 className="text-2xl font-bold text-white mb-4 text-center">
+          <h2 className="mb-4 text-center text-2xl font-bold text-white">
             Subscribe to our newsletter
           </h2>
 
-          <form className="flex border bg-white rounded-full p-1">
+          <form className="flex rounded-full border bg-white p-1">
             <input
               placeholder="Enter your email address"
-              className=" text-gray-800 rounded-full p-2 flex-1 focus:outline-none  transition ease-in-out duration-150"
+              className="flex-1 rounded-full p-2 text-gray-800 transition duration-150 ease-in-out focus:outline-none"
               type="email"
             />
 
             <button
-              className={`w-fit px-3 h-[40px] bg-[#6947BF] flex items-center justify-center cursor-pointer duration-[0.5s] overflow-hidden shadow-[0px_5px_10px_rgba(0,0,0,0.103)] relative rounded-full border-[none] md:active:duration-[0.5s] md:active:scale-95`}
+              className={`relative flex h-[40px] w-fit cursor-pointer items-center justify-center overflow-hidden rounded-full border-[none] bg-[#6947BF] px-3 shadow-[0px_5px_10px_rgba(0,0,0,0.103)] duration-[0.5s] md:active:scale-95 md:active:duration-[0.5s]`}
             >
-              <p className="text h-full w-fit flex items-center justify-center text-white z-[1] duration-[0.5s] text-[1.04em] font-normal">
+              <p className="text z-[1] flex h-full w-fit items-center justify-center text-[1.04em] font-normal text-white duration-[0.5s]">
                 Subscribe
               </p>
             </button>
@@ -27,5 +33,5 @@ export function NewsLetter() {
         </div>
       </div>
     </div>
-  );
+  )
 }

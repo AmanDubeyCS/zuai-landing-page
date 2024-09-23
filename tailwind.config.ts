@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 const { fontFamily } = require("tailwindcss/defaultTheme")
 const config: Config = {
   content: [
@@ -22,7 +22,6 @@ const config: Config = {
         "neutrals-700": "var(--neutrals-700)",
         "neutrals-800": "var(--neutrals-800)",
         "neutrals-900": "var(--neutrals-900)",
-        
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -57,5 +56,5 @@ const config: Config = {
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

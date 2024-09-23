@@ -12,7 +12,6 @@ export function FadeInSection({
   delay?: number
   className?: string
 }) {
-
   return (
     <motion.div
       className={className}
