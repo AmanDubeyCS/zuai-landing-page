@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import { Header } from "@/components/Header/Header"
+// import { Header } from "@/components/Header/Header"
 
 export const metadata: Metadata = {
   title: "ZuAI Home",
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="bg-white">
-          <Header />
+          {/* <Header /> */}
           {children}
           {/* <Footer /> */}
         </div>
