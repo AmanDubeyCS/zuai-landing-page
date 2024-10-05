@@ -129,3 +129,24 @@ body {
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  /* Target the whole scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the track */
+}
+
+/* Handle (scrolling element) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* color of the thumb */
+    border-radius: 10px; /* round edges */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* change color on hover */
+}
