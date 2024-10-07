@@ -1,3 +1,4 @@
+import { ShortVideos } from "@/components/PYQLibrary-page/shortVideoList/ShortVideos"
 import { VideoList } from "@/components/PYQLibrary-page/videoList/VideoList"
 import { config } from "@/youtubeApiConfig"
 import React from "react"
@@ -36,6 +37,7 @@ export default async function layout({ children }: RootLayoutProps) {
       {playList && videos && (
         <VideoList playlist={playList.items} videos={sortedVideos} />
       )}
+      <ShortVideos />
     </div>
   )
 }

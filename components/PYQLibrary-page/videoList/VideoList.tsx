@@ -50,10 +50,10 @@ export function VideoList({
       setList(filterList)
       setVideoList(filterdVideoList)
     }
-  }, [filter])
+  }, [filter, playlist, videos])
 
   return (
-    <div className="z-50 flex flex-col gap-4">
+    <div className="z-30 flex flex-col gap-4">
       <div className="flex flex-col gap-3">
         <h2 className="text-[32px] font-bold leading-[normal] tracking-[0.16px] text-neutrals-900 sm:tracking-[0.28px]">
           PYQ Videos{" "}

@@ -7,7 +7,7 @@ import React from "react"
 
 export function Hero() {
   return (
-    <div className="z-[48] flex flex-col items-center gap-8 self-stretch bg-white px-3 py-16 lg:px-0">
+    <div className="z-30 flex flex-col items-center gap-8 self-stretch bg-white px-3 py-16 lg:px-0">
       {/* <div className="absolute inset-0 z-[-50] hidden place-items-center bg-transparent md:grid pt-[750px]">
         <Image
           src={DashboardBGImage}

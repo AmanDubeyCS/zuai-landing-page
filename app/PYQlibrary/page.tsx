@@ -6,7 +6,6 @@ export default async function page() {
     <div className="flex flex-col gap-8">
       <Hero />
       <div className="h-px w-full bg-black"></div>
-      {/* <ShortVideos /> */}
     </div>
   )
 }

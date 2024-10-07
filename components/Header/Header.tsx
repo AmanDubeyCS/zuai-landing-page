@@ -6,7 +6,7 @@ import { Icons } from "../icons"
 
 export function Header() {
   return (
-    <div className="sticky top-0 z-[51] w-full bg-white">
+    <div className="sticky top-0 z-[31] w-full bg-white">
       <header className="mx-auto flex max-w-[1440px] items-center justify-center bg-white px-8 py-4">
         <div className="flex w-full items-center justify-between self-stretch">
           <Link href="/PYQlibrary" className="relative z-[11]">
