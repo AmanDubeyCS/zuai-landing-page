@@ -42,9 +42,9 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center text-[40px] font-semibold leading-[normal] text-neutrals-900 sm:text-5xl 2xl:font-bold 3xl:text-[64px]"
         >
-          <span>Your 24 X 7 AI Study Buddy</span>
+          <span>IBDP Previous year</span>
           <span className="flex flex-wrap items-center justify-center leading-[110%] xs:flex-row xs:gap-4">
-            For your<span className="bg-[#FFE55E] px-1"> Exam Prep</span>
+          solved<span className="bg-[#FFE55E] px-1"> question papers</span>
           </span>
         </motion.h1>
       </div>
