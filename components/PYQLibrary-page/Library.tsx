@@ -11,7 +11,7 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { Icons } from "../icons"
 
-export function Library({ items, handleClick }) {
+export function Library({ items, handleClick }: {items: any, handleClick: any}) {
   return (
     <div style={{width: "-webkit-fill-available"}} className="mx-auto max-w-[1400px] pt-2 text-center">
       <Swiper
@@ -38,7 +38,7 @@ export function Library({ items, handleClick }) {
         }}
         modules={[Navigation]}
       >
-        {items.map((playlist, index) => (
+        {items.map((playlist: any, index: number) => (
           <SwiperSlide
             key={index}
             onClick={() => handleClick(playlist.id)}

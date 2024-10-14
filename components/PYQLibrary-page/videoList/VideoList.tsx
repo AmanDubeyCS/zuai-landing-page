@@ -1,10 +1,9 @@
 "use client"
 import { cn } from "@/lib/utils"
 import { usePathname, useRouter } from "next/navigation"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Swiper as SwiperType } from "swiper/types"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
@@ -19,7 +18,6 @@ export function VideoList({
   playlist: any
   videos: any
 }) {
-  const swiperRef = useRef<SwiperType | null>(null)
   const [list, setList] = useState(playlist)
   const [videoList, setVideoList] = useState(videos)
   const [filter, setFilter] = useState("All")

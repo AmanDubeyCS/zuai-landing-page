@@ -5,7 +5,6 @@ import data from "@/components/PYQLibrary-page/shortsData.json"
 import { usePathname } from "next/navigation"
 import { Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Swiper as SwiperType } from "swiper/types"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
