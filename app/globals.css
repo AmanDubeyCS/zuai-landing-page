@@ -150,3 +150,26 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* change color on hover */
 }
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white; /* Button background color */
+  padding: 8px 16px;
+  border-radius: 50%; /* Round buttons */
+  border: 2px solid #0055d3;
+}
+
+/* Change the arrow color */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size:  20px !important;
+}
+
+/* Optional: Adjust button size */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px !important;      /* Adjust the width of the button */
+  height: 50px !important;     /* Adjust the height of the button */
+}
+

@@ -1,7 +1,8 @@
+const channelId="UCrzMQ38sRyAx_PIETNJjN-Q"
 export const config = {
-  getYoutubePlaylist: `https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCrzMQ38sRyAx_PIETNJjN-Q&maxResults=25&key=AIzaSyDRoqhL9_pd9CeSa2Z6RECcmlCPB8dEass`,
+  getYoutubePlaylist: `https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=${channelId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`,
   getVideosFromPlaylist: (playlistID: string) =>
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&key=AIzaSyDRoqhL9_pd9CeSa2Z6RECcmlCPB8dEass&maxResults=50`,
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistID}&key=${process.env.YOUTUBE_KEY}&maxResults=50`,
   getVideoFromVideoId: (videoID: string) =>
-    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${videoID}&key=AIzaSyDRoqhL9_pd9CeSa2Z6RECcmlCPB8dEass`,
+    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${videoID}&key=${process.env.YOUTUBE_KEY}`,
 }

@@ -1,8 +1,16 @@
 "use client"
-import { Icons } from "@/components/icons"
 import { cn } from "@/lib/utils"
 import { usePathname, useRouter } from "next/navigation"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import { Navigation } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper as SwiperType } from "swiper/types"
+
+import "swiper/css"
+import "swiper/css/effect-fade"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import { Library } from "../Library"
 
 export function VideoList({
   playlist,
@@ -11,6 +19,7 @@ export function VideoList({
   playlist: any
   videos: any
 }) {
+  const swiperRef = useRef<SwiperType | null>(null)
   const [list, setList] = useState(playlist)
   const [videoList, setVideoList] = useState(videos)
   const [filter, setFilter] = useState("All")
@@ -64,7 +73,7 @@ export function VideoList({
               key={index}
               onClick={() => setFilter(tags)}
               className={cn(
-                "flex h-[32px] w-[178px] cursor-pointer items-center justify-center rounded-[32px] border border-[#D9D9D9] text-[18px] font-medium",
+                "flex h-[32px] w-fit cursor-pointer items-center justify-center rounded-[32px] border border-[#D9D9D9] px-3 text-[18px] font-medium",
                 tags === filter && "border-blue-500 bg-blue-100"
               )}
             >
@@ -73,50 +82,60 @@ export function VideoList({
           ))}
         </div>
       </div>
-      <div className="scrollbar-none flex gap-6 overflow-x-scroll">
-        {list.map((playlist: any) => (
-          <div
-            key={playlist.id}
-            className="flex max-w-[320px] cursor-pointer flex-col gap-2"
-            onClick={() => handleClick(playlist.id)}
-          >
-            <div className="relative h-[180px] w-[320px] overflow-hidden rounded-lg bg-[#D9D9D9]">
-              <img src={playlist.snippet.thumbnails.medium.url} alt="" />
-              <p className="absolute bottom-2 right-2 flex items-center gap-1 rounded-lg bg-[#051C26CC] p-1 text-white">
-                <Icons.playlistIcon className="text-white" />
-                {playlist.contentDetails.itemCount} <span>videos</span>
-              </p>
-            </div>
-            <div className="flex flex-col gap-1 text-left">
-              <p className="line-clamp-2 text-wrap text-[18px] font-medium">
-                {playlist.snippet.title}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="scrollbar-none flex gap-6 overflow-x-scroll">
-        {videoList.map((video: any) => (
-          <div
-            key={video.id}
-            className="flex max-w-[320px] cursor-pointer flex-col gap-2"
-            onClick={() =>
-              handleVideoClick(
-                video.snippet.playlistId,
-                video.snippet.resourceId.videoId
-              )
-            }
-          >
-            <div className="relative h-[180px] w-[320px] overflow-hidden rounded-lg bg-[#D9D9D9]">
-              <img src={video.snippet.thumbnails.medium.url} alt="" />
-            </div>
-            <div className="flex flex-col gap-1 text-left">
-              <p className="line-clamp-2 text-wrap text-[18px] font-medium">
-                {video.snippet.title}
-              </p>
-            </div>
-          </div>
-        ))}
+      <Library items={list} handleClick={(val: any) => handleClick(val)} />
+
+      <div
+        style={{ width: "-webkit-fill-available" }}
+        className="mx-auto max-w-[1400px] pt-2 text-center"
+      >
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={20}
+          navigation
+          breakpoints={{
+            140: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1440: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          modules={[Navigation]}
+        >
+          {videoList.map((video: any) => (
+            <SwiperSlide
+              key={video.id}
+              onClick={() =>
+                handleVideoClick(
+                  video.snippet.playlistId,
+                  video.snippet.resourceId.videoId
+                )
+              }
+              className="!flex items-center justify-center"
+            >
+              <div className="flex max-w-[320px] cursor-pointer flex-col gap-2">
+                <div className="relative h-[180px] w-[320px] overflow-hidden rounded-lg bg-[#D9D9D9]">
+                  <img src={video.snippet.thumbnails.medium.url} alt="" />
+                </div>
+                <div className="flex flex-col gap-1 text-left">
+                  <p className="line-clamp-1 text-wrap text-[18px] font-medium">
+                    {video.snippet.title}
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   )
