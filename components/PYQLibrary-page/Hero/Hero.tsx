@@ -44,7 +44,7 @@ export function Hero() {
         >
           <span>IBDP Previous year</span>
           <span className="flex flex-wrap items-center justify-center leading-[110%] xs:flex-row xs:gap-4">
-          solved<span className="bg-[#FFE55E] px-1"> question papers</span>
+            solved<span className="bg-[#FFE55E] px-1"> question papers</span>
           </span>
         </motion.h1>
       </div>

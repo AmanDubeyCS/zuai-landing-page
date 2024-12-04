@@ -11,9 +11,18 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { Icons } from "../icons"
 
-export function Library({ items, handleClick }: {items: any, handleClick: any}) {
+export function Library({
+  items,
+  handleClick,
+}: {
+  items: any
+  handleClick: any
+}) {
   return (
-    <div style={{width: "-webkit-fill-available"}} className="mx-auto max-w-[1400px] pt-2 text-center">
+    <div
+      style={{ width: "-webkit-fill-available" }}
+      className="mx-auto max-w-[1400px] pt-2 text-center"
+    >
       <Swiper
         slidesPerView={3}
         spaceBetween={20}
@@ -42,7 +51,7 @@ export function Library({ items, handleClick }: {items: any, handleClick: any}) 
           <SwiperSlide
             key={index}
             onClick={() => handleClick(playlist.id)}
-            className="!flex justify-center items-center"
+            className="!flex items-center justify-center"
           >
             <div
               key={playlist.id}

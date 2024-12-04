@@ -1,4 +1,4 @@
-const channelId="UCrzMQ38sRyAx_PIETNJjN-Q"
+const channelId = "UCrzMQ38sRyAx_PIETNJjN-Q"
 export const config = {
   getYoutubePlaylist: `https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=${channelId}&maxResults=25&key=${process.env.YOUTUBE_KEY}`,
   getVideosFromPlaylist: (playlistID: string) =>
