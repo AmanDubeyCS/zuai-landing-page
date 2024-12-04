@@ -1,6 +1,5 @@
 import React from "react"
 import { CTAButton } from "../CTAButton"
-import Image from "next/image"
 
 export function Hero() {
   return (
