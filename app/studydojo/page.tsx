@@ -1,4 +1,3 @@
-import { AiFeatures } from "@/components/studydojo/AiFeatures/AiFeatures"
 import { CTABanner } from "@/components/studydojo/CTAbanner/CTABanner"
 import { Features1 } from "@/components/studydojo/features1/Features1"
 import { Features2 } from "@/components/studydojo/features2/Features2"
@@ -10,12 +9,12 @@ import React from "react"
 
 export default function page() {
   return (
-    <main>
+    <main className="font-bricolage"> 
       <Hero />
       <TrustedBy />
       <Features1 />
       <SubjectsList />
-      <AiFeatures />
+      {/* <AiFeatures /> */}
       <Features2 />
       <SecurityBanner />
       <CTABanner />

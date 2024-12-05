@@ -40,8 +40,6 @@ const reviews = [
   },
 ]
 
-const secondRow = reviews.slice(reviews.length / 2)
-
 const ReviewCard = ({
   img,
   name,
@@ -87,7 +85,7 @@ export function SubjectMarquee() {
   return (
     <div className="relative flex h-[240px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
       <Marquee reverse className="[--duration:20s]">
-        {secondRow.map((review) => (
+        {reviews.map((review) => (
           <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>

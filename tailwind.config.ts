@@ -35,6 +35,8 @@ const config: Config = {
         bricolage: ["var(--font-bricolage)", ...fontFamily.sans],
         mont: ["var(--font-mont)", ...fontFamily.sans],
         kalam: ["var(--font-kalam)", ...fontFamily.sans],
+        gilroy: ["var(--font-gilroy)", ...fontFamily.sans],
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
       },
       animation: {
         marquee: "marquee var(--duration) linear infinite",
