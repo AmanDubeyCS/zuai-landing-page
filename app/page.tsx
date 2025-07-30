@@ -7,9 +7,12 @@
 // import { NewsLetter } from "@/components/Newsletter/NewsLetter";
 // import { Testimonials } from "@/components/Testimonials/Testimonials";
 
+import { SocialProofSection } from "@/components/SocialProof";
+
 export default function Home() {
   return (
     <>
+    <SocialProofSection />
       {/* <main className="mx-auto flex flex-col space-y-[80px] bg-white lg:space-y-0">
         <HeroContainer />
         <Hero />

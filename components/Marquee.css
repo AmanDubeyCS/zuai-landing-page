@@ -1,0 +1,41 @@
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.video-card {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-card.active {
+  transform: scale(1.15);
+  z-index: 10;
+}
+
+/* Pause animation if the tab is in the background or user prefers no motion */
+.marquee-content[data-paused='true'] {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-content {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--marquee-width, -50%));
+  }
+}
