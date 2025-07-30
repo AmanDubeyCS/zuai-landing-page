@@ -19,25 +19,25 @@ const tierDetails = {
 };
 
 const videoFilenames = [
-  'anika.established_output',
-  'disha.established_output',
-  'diya.established_output',
-  'isaiah.emerging_output',
-  'logan.emerging_output',
-  'mara.established_output',
-  'myra.emerging_output',
-  'naseem.emerging_output',
-  'sahaana.emerging_output',
-  'sean.emerging_output',
-  'tisha.premium_output',
-  'zay.emerging_output',
+  'v1752056295/videos/Video_12_tsjfzn',
+  'v1752056295/videos/Video_1_ipg6rk',
+  'v1752056295/videos/Video_11_jwo3ke',
+  'v1752056288/videos/Video_9_kflayl',
+  'v1752056295/videos/Video_12_tsjfzn',
+  'v1752056295/videos/Video_1_ipg6rk',
+  'v1752056295/videos/Video_11_jwo3ke',
+  'v1752056288/videos/Video_9_kflayl',
+//   'sahaana.emerging_output',
+//   'sean.emerging_output',
+//   'tisha.premium_output',
+//   'zay.emerging_output',
 ];
 
-const videoBaseUrl = process.env.NEXT_PUBLIC_VIDEO_BASE_URL || 'https://adarahouse.b-cdn.net';
+const videoBaseUrl = process.env.NEXT_PUBLIC_VIDEO_BASE_URL || 'https://res.cloudinary.com/dlyufrawd/video/upload';
 
 const initialSocialProofData = videoFilenames.map((baseFilename, i) => {
-  const [name, tierString] = baseFilename.split('.');
-  const tierName = tierString.split('_')[0];
+  const [name, tierString] = baseFilename.split('/');
+  const tierName = tierString.split('/')[0];
   const capitalizedTier = (tierName.charAt(0).toUpperCase() +
     tierName.slice(1)) as keyof typeof tierDetails;
 
